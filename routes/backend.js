@@ -103,7 +103,7 @@ router.post('/create_category', async (req, res)=>{
     }else{
         // Insert to mongodb
         await db.collection('category').insertOne({
-            CategoryID: categoryID,
+            CategoryID: parseInt(categoryID),
             CategoryName: CategoryName,
             CategoryStatus: parseInt(CategoryStatus),
             CreatedDate: curdatetime,
